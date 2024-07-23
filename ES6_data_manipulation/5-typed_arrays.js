@@ -8,7 +8,7 @@ function createInt8TypedArray(length, position, value) {
 
   view.setInt8(position, value);
 
-  return buffer;
+  return view;
 }
 
 export default createInt8TypedArray;
