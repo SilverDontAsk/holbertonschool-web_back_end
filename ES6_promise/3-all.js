@@ -2,8 +2,7 @@ const { uploadPhoto, createUser } = require('./utils');
 
 function handleProfileSignup() {
   return Promise.all([uploadPhoto(), createUser()])
-    .then((results) => {
-      const [photo, user] = results;
+    .then(([photo, user]) => {
       console.log(`${photo.body} ${user.firstName} ${user.lastName}`);
     })
     .catch(() => {
