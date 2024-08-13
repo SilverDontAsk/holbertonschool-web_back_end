@@ -2,15 +2,15 @@
 """
 annotationg element length
 """
-from typing import List, Tuple
+from typing import List, Tuple, Sequence, Iterable
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
     Function to calculate the length of an element
     Args:
-        lst: expected to be a list with a string
+        lst: expected to be a list with a sequence
     Returns:
-        A tuple with the str and its length
+        A tuple with the sequence and its length
     """
     return [(i, len(i)) for i in lst]
