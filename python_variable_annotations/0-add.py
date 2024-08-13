@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+The purpose of this function is simply add floats
+"""
+
 
 def add(a: float, b: float) -> float:
     """
