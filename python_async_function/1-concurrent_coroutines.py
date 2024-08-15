@@ -17,12 +17,10 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         list of all delays
     """
     tasks = [await wait_random(max_delay) for _ in range(n)]
-    
     delay = []
     for task in tasks:
         delay.append(task)
-        for i in range(len(delay) -1, 0, -1):
+        for i in range(len(delay) - 1, 0, -1):
             if delay[i] < delay[i - 1]:
                 delay[i], delay[i - 1] = delay[i - 1], delay[i]
     return delay
-    
