@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Concurrent coroutines
+wait_n but altered
 """
 import asyncio
 from typing import List
