@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Async Generator
+Async Generator that yields random floats from 0 to 10
 """
 import asyncio
 import random
