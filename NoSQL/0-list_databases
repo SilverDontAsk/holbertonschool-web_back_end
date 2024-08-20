@@ -1,2 +1,4 @@
-// listing databases
-db.adminCommand('listDatabases');
+// my comment
+db.adminCommand('listDatabases').databases.forEach(function(d) {
+    print(d.name);
+});
