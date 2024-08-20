@@ -1,0 +1,6 @@
+// creating or using a database
+var db = db.getSiblingDB('my_db');
+
+db.createCollection('my_collection');
+
+print('Database "my_db" is created or already exists.');
