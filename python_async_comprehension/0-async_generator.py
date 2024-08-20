@@ -4,10 +4,10 @@ Async Generator that yields random floats from 0 to 10
 """
 import asyncio
 import random
-from typing import AsyncGenerator
+from typing import Generator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     """
     This function will loop 10 times.
     For every iteration, it will wait and produce
