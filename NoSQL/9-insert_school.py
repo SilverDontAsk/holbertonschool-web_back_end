@@ -15,4 +15,4 @@ def insert_school(mongo_collection, **kwargs):
         str: _id of new doc
     """
     res = mongo_collection.insert_one(kwargs)
-    return str(res.inserted_id)
+    return res.inserted_id
