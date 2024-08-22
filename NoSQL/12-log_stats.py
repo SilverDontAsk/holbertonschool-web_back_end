@@ -18,7 +18,7 @@ def Nginx_log_provider():
     for method in methods:
         count = nginx_coll.count_documents({'method': method})
         print(f"\tmethod {method}: {count}")
-    stat_chk = nginx_coll.count_documents({'method': 'GET', 'path': '/status'})
+    stat_chk = nginx_coll.count_documents({"method": "GET", "path": "/status"})
     print(f"{stat_chk} status check")
 
 
