@@ -7,7 +7,7 @@ process.stdin.on('data', (data) => {
   console.log(`Your name is: ${name}`);
 
   if (!process.stdin.isTTY) {
-    console.log('This important software is now closing\n');
+    console.log("This important software is now closing");
   }
 
   process.exit();
