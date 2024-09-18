@@ -7,7 +7,7 @@ const app = http.createServer((req, res) => {
 
   if (reqUrl.pathname === '/') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello Holberton School');
+    res.end('Hello Holberton School!');
   } else if (reqUrl.pathname === '/students') {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.write('This is the list of our students\n');
