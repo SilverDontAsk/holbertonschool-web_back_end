@@ -7,19 +7,20 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
-  res.setHeader('Content-Type', 'text/plain');
   const dbpath = process.argv[2];
+  let o = 'This is the list of our students\n';
   if (!dbpath) {
-    res.send('Cannot load the database');
+    o += 'Cannot load the database';
+    res.status(500).send(o);
     return;
   }
   try {
-    let o = 'This is the list of our students\n';
     const studentsData = await countStudents(dbpath);
     o += studentsData;
     res.send(o);
   } catch (error) {
-    res.send('Cannot load the database');
+    o += 'Cannot load the database';
+    res.send(o);
   }
 });
 
