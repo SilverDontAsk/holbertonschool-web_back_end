@@ -14,7 +14,7 @@ class StudentsController {
         });
       res.status(200).send(output.trim());
     } catch (err) {
-      res.send('Cannot load the database');
+      res.status(500).send('Cannot load the database');
     }
   }
 
@@ -23,15 +23,15 @@ class StudentsController {
     const { major } = req.params;
 
     if (major !== 'CS' && major !== 'SWE') {
-      res.send('Major parameter must be CS or SWE');
+      res.status(500).send('Major parameter must be CS or SWE');
       return;
     }
     try {
       const students = await readDB(databaseFile);
       const list = students[major].join(', ');
-      res.send(`List: ${list}`);
+      res.status(200).send(`List: ${list}`);
     } catch (err) {
-      res.send('Cannot load the database');
+      res.status(500).send('Cannot load the database');
     }
   }
 }
